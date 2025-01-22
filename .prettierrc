@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc.json",
+  "tabWidth": 2,
+  "printWidth": 100,
+  "semi": true,
+  "useTabs": false,
+  "singleQuote": true,
+  "bracketSpacing": false,
+  "endOfLine": "auto",
+  "arrowParens": "always",
+  "trailingComma": "all",
+  "embeddedLanguageFormatting": "auto",
+  "settings": {
+    "[javascript]": {
+      "editor.rulers": [100]
+    },
+    "[typescript]": {
+      "editor.rulers": [100],
+      "editor.singleQuote": true
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@zeitui/icons",
+  "version": "0.1.1",
+  "description": "Iconos de la librería de componentes de Zeit UI, basados en Lucide Icons",
+  "license": "MIT",
+  "keywords": [
+    "icon",
+    "icons",
+    "zeit",
+    "zeitui"
+  ],
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsup src --dts",
+    "dev": "pnpm build:fast --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "build:fast": "tsup src",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "author": "",
+  "peerDependencies": {
+    "react": ">=18 || >=19.0.0-rc.0"
+  },
+  "devDependencies": {
+    "clean-package": "2.2.0",
+    "react": "^18.0.0"
+  }
+}

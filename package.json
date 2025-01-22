@@ -1,0 +1,37 @@
+{
+  "name": "zeitui",
+  "author": {
+    "name": "Luis Lopez Huari",
+    "email": "luislopezhuari27@gmail.com"
+  },
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo run dev",
+    "clean": "turbo run clean",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "release": "pnpm build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.11",
+    "@storybook/react": "8.5.0",
+    "@types/node": "^20.17.14",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@typescript-eslint/eslint-plugin": "^8.21.0",
+    "@typescript-eslint/parser": "^8.21.0",
+    "eslint": "9.18.0",
+    "plop": "^4.0.1",
+    "prettier": "^3.4.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.3.5",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.3"
+  },
+  "packageManager": "pnpm@9.14.4"
+}
