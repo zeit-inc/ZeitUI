@@ -1,0 +1,34 @@
+{
+  "name": "@zeitui/download-file-utils",
+  "version": "0.1.0-beta.0",
+  "description": "Utility for downloading files in the browser",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src --dts",
+    "dev": "tsup src --watch",
+    "clean": "rimraf dist",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "keywords": [
+    "download",
+    "file",
+    "browser",
+    "utility"
+  ],
+  "author": "Luis Lopez <luislopezhuari27@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "clean-package": "2.2.0"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}
