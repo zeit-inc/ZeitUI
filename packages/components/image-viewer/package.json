@@ -1,5 +1,5 @@
 {
-  "name": "@zeitui/image-viewer",
+  "name": "@zeitui-org/image-viewer",
   "version": "0.1.11",
   "description": "Image viewer component with zoom and pan capabilities",
   "main": "src/index.ts",
@@ -36,7 +36,8 @@
   },
   "dependencies": {
     "@heroui/button": "^2.2.10",
-    "@zeitui/icons": "workspace:*"
+    "@zeitui-org/icons": "workspace:*",
+    "@zeitui-org/file-fetch-utils": "workspace:*"
   },
   "clean-package": "../../../clean-package.config.json"
 }
