@@ -1,0 +1,48 @@
+{
+  "name": "@zeitui-org/file-utils",
+  "version": "1.0.0",
+  "description": "Utilidad interna para el manejo de los archivos",
+  "keywords": [
+    "file-utils"
+  ],
+  "author": "Luis Lopez <luislopezhuari27@gmail.com>",
+  "homepage": "https://zeiut.luislh.dev",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeit-inc/Zeit-Ui.git",
+    "directory": "packages/utils/file-utils"
+  },
+  "bugs": {
+    "url": "https://github.com/zeit-inc/Zeit-Ui/issues"
+  },
+  "scripts": {
+    "build": "tsup src --dts",
+    "build:fast": "tsup src",
+    "dev": "pnpm build:fast --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "devDependencies": {
+    "clean-package": "2.2.0"
+  },
+  "clean-package": "../../../clean-package.config.json",
+  "tsup": {
+    "clean": true,
+    "target": "es2022",
+    "format": [
+      "cjs",
+      "esm"
+    ]
+  }
+}
