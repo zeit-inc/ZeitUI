@@ -1,6 +1,6 @@
 {
   "name": "@zeitui-org/file-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utilidad interna para el manejo de los archivos",
   "keywords": [
     "file-utils"

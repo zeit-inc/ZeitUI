@@ -1,24 +1,16 @@
-# @heroui/file-utils
+# @zeitui-org/file-utils
 
 Utilidad interna para el manejo de los archivos
 
-Please refer to the [documentation](https://heroui.com/docs/components/file-utils) for more information.
-
-## Installation
+## Instalación
 
 ```sh
-yarn add @heroui/file-utils
+yarn add @zeitui-org/file-utils
 # or
-npm i @heroui/file-utils
+npm i @zeitui-org/file-utils
 ```
 
-## Contribution
+## Licencia
 
-Yes please! See the
-[contributing guidelines](https://github.com/heroui-inc/heroui/blob/master/CONTRIBUTING.md)
-for details.
-
-## License
-
-This project is licensed under the terms of the
-[MIT license](https://github.com/heroui-inc/heroui/blob/master/LICENSE).
+Este proyecto está licenciado bajo los términos de la 
+[MITlicense](https://github.com/zeit-inc/Zeit-Ui/blob/main/LICENSE).
