@@ -19,7 +19,7 @@ module.exports = function (plop) {
 
       // Extraer solo los elementos gráficos internos (sin el contenedor <svg>)
       const content = svg.match(
-        /<circle[^>]*>|<line[^>]*>|<path[^>]*>|<rect[^>]*>|<polygon[^>]*>/g,
+        /<circle[^>]*>|<line[^>]*>|<path[^>]*>|<rect[^>]*>|<polygon[^>]*>|<polyline[^>]*>/g,
       );
 
       if (!content) {
