@@ -2,6 +2,17 @@
   "name": "@zeitui-org/icons",
   "version": "0.1.1",
   "description": "Iconos de la librería de componentes de Zeit UI, basados en Lucide Icons",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeit-inc/Zeit-Ui.git",
+    "directory": "packages/icons"
+  },
+  "bugs": {
+    "url": "https://github.com/zeit-inc/Zeit-Ui/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "keywords": [
     "icon",
