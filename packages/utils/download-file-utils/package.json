@@ -1,6 +1,6 @@
 {
   "name": "@zeitui-org/file-fetch-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Utility for downloading files in the browse",
   "main": "src/index.ts",
   "sideEffects": false,
