@@ -1,28 +1,25 @@
-# 📥 @zeitui/download-file-utils
+# @zeitui-org/file-fetch-utils
 
-Una utilidad sencilla y eficiente para descargar archivos en el navegador. Soporta imágenes, PDFs, documentos de Word, Excel y más. ¡Fácil de usar y altamente personalizable! ✨
+**Este paquete está obsoleto.** En su lugar, utilice [`@zeitui-org/file-utils`](https://github.com/zeit-inc/Zeit-Ui/tree/main/packages/utils/file-utils).
 
----
+## Guía de migración
 
-## 🛠️ Instalación
+Para migrar de `@zeitui-org/file-fetch-utils` a `@zeitui-org/file-utils`, siga estos pasos:
 
-Instala el paquete usando **npm**, **pnpm** o **yarn**:
-
-```bash
-npm install @zeitui/download-file-utils
-```
+1. Instale el nuevo paquete:
 
 ```bash
-pnpm add @zeitui/download-file-utils
+npm install @zeitui-org/file-utils
 ```
 
-```bash
-yarn add @zeitui/download-file-utils
+2. Actualice sus importaciones:
+
+```ts
+// Antes
+import { DownloadFile } from '@zeitui-org/file-fetch-utils';
+
+// Después
+import { downloadFile } from '@zeitui-org/file-utils';
 ```
 
----
-
-# 📄 Licencia
-
-Este proyecto está bajo la licencia MIT. Para más detalles, consulta el archivo [MIT license](https://github.com/zeit-inc/Zeit-Ui/blob/main/LICENSE)
-.
+3. Actualice cualquier cambio de API según sea necesario.

@@ -34,6 +34,7 @@
   ],
   "author": "Luis Lopez <luislopezhuari27@gmail.com>",
   "license": "MIT",
+  "deprecated": "This package is deprecated. Please use @zeitui-org/file-utils instead.",
   "dependencies": {},
   "devDependencies": {
     "clean-package": "^2.2.0"
