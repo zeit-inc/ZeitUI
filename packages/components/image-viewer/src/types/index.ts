@@ -1,5 +1,36 @@
+export type Size = 'sm' | 'md' | 'lg' | undefined;
+export type Variant =
+  | 'solid'
+  | 'bordered'
+  | 'light'
+  | 'flat'
+  | 'faded'
+  | 'shadow'
+  | 'ghost'
+  | undefined;
+export type Color =
+  | 'default'
+  | 'primary'
+  | 'secondary'
+  | 'success'
+  | 'warning'
+  | 'danger'
+  | undefined;
+export type Radius = 'none' | 'sm' | 'md' | 'lg' | 'full' | undefined;
+
+export interface ControlStyleProps {
+  variant?: Variant;
+  color?: Color;
+  size?: Size;
+  radius?: Radius;
+  isDisabled?: boolean;
+  disableRipple?: boolean;
+  disableAnimation?: boolean;
+}
+
 export interface ImageViewerProps {
   src: string;
+  constrolStyle?: ControlStyleProps;
 }
 
 export interface ImageControlsProps {
@@ -12,8 +43,6 @@ export interface ImageControlsProps {
   onRotateRight: () => void;
   onReset: () => void;
 }
-
-export type Size = 'sm' | 'md' | 'lg' | undefined;
 
 export interface Position {
   x: number;

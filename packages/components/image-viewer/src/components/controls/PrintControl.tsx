@@ -1,12 +1,13 @@
 import { Button } from '@heroui/button';
 import { printFile } from '@zeitui-org/file-utils';
 import { Printer } from '@zeitui-org/icons';
+import { ControlStyleProps } from '../../types';
 
 type PrintControlProps = {
   url: string;
-};
+} & ControlStyleProps;
 
-export const PrintControl = ({ url }: PrintControlProps) => {
+export const PrintControl = ({ url, ...controlStyles }: PrintControlProps) => {
   const handlePrint = () => {
     printFile(url);
   };
@@ -16,9 +17,8 @@ export const PrintControl = ({ url }: PrintControlProps) => {
       onPress={handlePrint}
       aria-label="Print image"
       title="Print image"
-      color="primary"
       isIconOnly
-      size="md"
+      {...controlStyles}
     >
       <Printer aria-hidden="true" />
     </Button>

@@ -1,13 +1,14 @@
 import { Button } from '@heroui/button';
 import { ZoomIn, ZoomOut } from '@zeitui-org/icons';
+import { ControlStyleProps } from '../../types';
 
-interface ZoomControlsProps {
+type ZoomControlsProps = {
   scale: number;
   zoomIn: () => void;
   zoomOut: () => void;
   isMaxScale: boolean;
   isMinScale: boolean;
-}
+} & ControlStyleProps;
 
 export const ZoomControls = ({
   scale,
@@ -15,19 +16,25 @@ export const ZoomControls = ({
   zoomOut,
   isMaxScale,
   isMinScale,
+  ...controlStyles
 }: ZoomControlsProps) => {
-  const scalePorcentage = scale * 100;
+  const scalePorcentage = scale * 100 + '%';
+
+  // Ajusta el tamaño del texto según la propiedad `size` de `controlStyles`:
+  // - 'sm' -> 'text-sm'
+  // - 'md' -> 'text-base'
+  // - 'lg' -> 'text-lg'
+  const sizeText =
+    controlStyles.size === 'sm' ? 'text-sm' : controlStyles.size === 'md' ? 'text-base' : 'text-lg';
 
   return (
     <div className="flex items-center">
       <Button
-        color="primary"
-        size="sm"
-        radius="md"
         aria-labelledby="zoom-in-label"
         isIconOnly
         onPress={zoomIn}
         isDisabled={isMaxScale}
+        {...controlStyles}
       >
         <ZoomIn />
       </Button>
@@ -35,16 +42,14 @@ export const ZoomControls = ({
         Incrementar zoom
       </span>
 
-      <span className="w-16 text-center ">{scalePorcentage}%</span>
+      <span className={`w-16 text-center ${sizeText}`}>{scalePorcentage}</span>
 
       <Button
-        color="primary"
-        size="sm"
-        radius="md"
         aria-labelledby="zoom-out-label"
         isIconOnly
         onPress={zoomOut}
         isDisabled={isMinScale}
+        {...controlStyles}
       >
         <ZoomOut />
       </Button>

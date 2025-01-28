@@ -1,14 +1,15 @@
+import { Button } from '@heroui/button';
+import { RestartAlt } from '@zeitui-org/icons';
+import { ControlStyleProps } from '../../types';
+
 type ResetControlProps = {
   handleReset: () => void;
-};
+} & ControlStyleProps;
 
-export const ResetControl = ({ handleReset }: ResetControlProps) => {
+export const ResetControl = ({ handleReset, ...controlStyles }: ResetControlProps) => {
   return (
-    <button
-      onClick={handleReset}
-      className="p-2 text-gray-600 hover:text-gray-900 rounded-full hover:bg-gray-100 transition-colors"
-    >
-      Reset
-    </button>
+    <Button aria-labelledby="reset-label" isIconOnly onPress={handleReset} {...controlStyles}>
+      <RestartAlt />
+    </Button>
   );
 };
