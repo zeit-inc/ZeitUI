@@ -52,12 +52,14 @@
     "rimraf": "^6.0.1",
     "typescript": "^5.0.0",
     "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react-dom": "18.3.1",
+    "@heroui/drawer": "^2.2.8",
+    "@heroui/use-disclosure": "^2.2.3"
   },
   "dependencies": {
     "@heroui/button": "^2.2.10",
-    "@zeitui-org/icons": "workspace:*",
-    "@zeitui-org/file-utils": "workspace:*"
+    "@zeitui-org/file-utils": "workspace:*",
+    "@zeitui-org/icons": "workspace:*"
   },
   "clean-package": "../../../clean-package.config.json"
 }
