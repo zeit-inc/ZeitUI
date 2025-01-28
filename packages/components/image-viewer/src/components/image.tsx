@@ -13,6 +13,7 @@ const ImageContainer = () => {
     scale,
     rotation,
     isDragging,
+    isFullScreen,
   } = useImageViewerState();
 
   return (
@@ -28,14 +29,14 @@ const ImageContainer = () => {
         ref={imageRef}
         src={src || '/placeholder.svg'}
         alt="Imagen para visualizar"
-        className="absolute left-1/2 top-1/2 select-none"
+        className={`absolute left-1/2 top-1/2 select-none ${isFullScreen ? 'max-h-screen' : ''}`}
         style={{
           transform: `
-                  translate(-50%, -50%)
-                  translate(${position.x}px, ${position.y}px)
-                  scale(${scale})
-                  rotate(${rotation}deg)
-                `,
+            translate(-50%, -50%)
+            translate(${position.x}px, ${position.y}px)
+            scale(${scale})
+            rotate(${rotation}deg)
+          `,
           transition: isDragging ? 'none' : 'transform 0.3s ease-out',
         }}
         onLoad={handleImageLoad}

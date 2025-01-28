@@ -24,6 +24,7 @@ interface ImageViewerState {
   rotateRight: () => void;
   resetRotation: () => void;
   toggleFullScreen: () => void;
+  viewerRef: React.RefObject<HTMLDivElement>;
   setPosition: (position: { x: number; y: number }) => void;
   handleMouseDown: (e: React.MouseEvent) => void;
   handleMouseMove: (e: React.MouseEvent) => void;
@@ -54,7 +55,7 @@ export const ImageViewerProvider = ({
   const { scale, resetScale, incrementScale, decrementScale, isMaxScale, isMinScale } =
     useImageScale();
   const { rotation, rotateLeft, rotateRight, resetRotation } = useImageRotation();
-  const { isFullScreen, toggleFullScreen } = useFullScreen();
+  const { isFullScreen, toggleFullScreen, viewerRef } = useFullScreen();
   const { position, setPosition, isDragging, handleMouseDown, handleMouseMove, handleMouseUp } =
     useImageDrag({
       scale,
@@ -87,6 +88,7 @@ export const ImageViewerProvider = ({
     rotateRight,
     resetRotation,
     toggleFullScreen,
+    viewerRef,
     setPosition,
     handleMouseDown,
     handleMouseMove,
