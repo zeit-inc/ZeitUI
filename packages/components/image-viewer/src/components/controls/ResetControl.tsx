@@ -8,7 +8,7 @@ type ResetControlProps = {
 
 export const ResetControl = ({ handleReset, ...controlStyles }: ResetControlProps) => {
   return (
-    <Button aria-labelledby="reset-label" isIconOnly onPress={handleReset} {...controlStyles}>
+    <Button aria-label="Resetear" isIconOnly onPress={handleReset} {...controlStyles}>
       <RestartAlt />
     </Button>
   );
