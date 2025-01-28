@@ -14,7 +14,7 @@ const DEFAULT_ALLOWED_EXTENSIONS = [
 ];
 
 // Constantes para tipos MIME permitidos
-const MIME_TYPE_MAP: {[key: string]: string} = {
+const MIME_TYPE_MAP: { [key: string]: string } = {
   'application/pdf': '.pdf',
   'image/jpeg': '.jpg',
   'image/png': '.png',
@@ -48,11 +48,19 @@ class DownloadError extends Error {
   }
 }
 
-export async function downloadFile(
-  url: string,
-  allowedExtensions: string[] = DEFAULT_ALLOWED_EXTENSIONS,
-  maxFileSize: number = DEFAULT_MAX_FILE_SIZE,
-) {
+type DownloadFileProps = {
+  url: string;
+  allowedExtensions?: string[];
+  maxFileSize?: number;
+  extensionDefault?: string;
+};
+
+export async function downloadFile({
+  url,
+  allowedExtensions = DEFAULT_ALLOWED_EXTENSIONS,
+  maxFileSize = DEFAULT_MAX_FILE_SIZE,
+  extensionDefault = '.pdf',
+}: DownloadFileProps) {
   try {
     const getFileNameFromUrl = (url: string): string => {
       const urlWithoutParams = url.split('?')[0].split('#')[0];
@@ -73,8 +81,8 @@ export async function downloadFile(
     };
 
     const getExtensionFromContentType = (contentType: string | null): string => {
-      if (!contentType) return '.pdf'; // default
-      return MIME_TYPE_MAP[contentType.toLowerCase()] || '.pdf';
+      if (!contentType) return extensionDefault; // default
+      return MIME_TYPE_MAP[contentType.toLowerCase()] || extensionDefault;
     };
 
     const response = await fetch(url);
@@ -117,7 +125,7 @@ export async function downloadFile(
     if (error instanceof DownloadError) {
       throw error; // Relanzar el error personalizado
     } else {
-      throw new DownloadError(ERROR_MESSAGES.DOWNLOAD_ERROR, {originalError: error});
+      throw new DownloadError(ERROR_MESSAGES.DOWNLOAD_ERROR, { originalError: error });
     }
   }
 }
