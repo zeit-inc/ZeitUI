@@ -22,7 +22,7 @@ export const ImageViewerContent = ({ controlStyle }: ImageViewerContentProps) =>
       <div
         className={`${isFullScreen ? 'h-screen' : 'h-[calc(100vh-64px)] max-h-[1600px]'} relative`}
       >
-        <div className="h-full flex flex-col overflow-hidden">
+        <div className="h-full w-full flex flex-col overflow-hidden">
           <ImageContainer />
           <ImageControls styles={controlStyle} />
         </div>

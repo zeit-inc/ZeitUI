@@ -19,7 +19,9 @@ const ImageContainer = () => {
   return (
     <div
       ref={containerRef}
-      className="flex-1 relative overflow-hidden cursor-grab active:cursor-grabbing"
+      className={`flex-1 relative overflow-hidden cursor-grab active:cursor-grabbing ${
+        isFullScreen ? 'h-screen w-screen' : 'min-h-[200px] min-w-[200px]'
+      }`}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
@@ -29,7 +31,9 @@ const ImageContainer = () => {
         ref={imageRef}
         src={src || '/placeholder.svg'}
         alt="Imagen para visualizar"
-        className={`absolute left-1/2 top-1/2 select-none ${isFullScreen ? 'max-h-screen' : ''}`}
+        className={`absolute left-1/2 top-1/2 select-none ${
+          isFullScreen ? 'max-h-screen' : 'max-h-full max-w-full'
+        }`}
         style={{
           transform: `
             translate(-50%, -50%)
