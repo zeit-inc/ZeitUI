@@ -30,7 +30,7 @@ export interface ControlStyleProps {
 
 export interface ImageViewerProps {
   src: string;
-  constrolStyle?: ControlStyleProps;
+  controlStyle?: ControlStyleProps;
 }
 
 export interface ImageControlsProps {
