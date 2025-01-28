@@ -37,7 +37,7 @@
   "dependencies": {
     "@heroui/button": "^2.2.10",
     "@zeitui-org/icons": "workspace:*",
-    "@zeitui-org/file-fetch-utils": "workspace:*"
+    "@zeitui-org/file-utils": "workspace:*"
   },
   "clean-package": "../../../clean-package.config.json"
 }
