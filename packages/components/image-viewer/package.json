@@ -2,6 +2,26 @@
   "name": "@zeitui-org/image-viewer",
   "version": "0.1.11",
   "description": "Image viewer component with zoom and pan capabilities",
+  "author": "Luis Lopez <luislopezhuari27@gmail.com>",
+  "homepage": "https://zeitui.luislh.dev",
+  "license": "MIT",
+  "keywords": [
+    "image-viewer",
+    "viewer",
+    "image",
+    "zeit",
+    "zeitui",
+    "react",
+    "react-image-viewer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeit-inc/Zeit-Ui.git",
+    "directory": "packages/components/image-viewer"
+  },
+  "bugs": {
+    "url": "https://github.com/zeit-inc/Zeit-Ui/issues"
+  },
   "main": "src/index.ts",
   "sideEffects": false,
   "files": [
