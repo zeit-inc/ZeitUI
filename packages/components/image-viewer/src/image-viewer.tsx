@@ -3,7 +3,17 @@ import ImageControls from './components/ImageControls';
 import { ImageViewerProvider } from './context/ImageViewerContext';
 import { ImageViewerProps } from './types';
 
-const ImageViewer = ({ src, controlStyle }: ImageViewerProps) => {
+const ImageViewer = (props: ImageViewerProps) => {
+  const { src } = props;
+
+  const controlStyle = {
+    variant: props.controlVariant,
+    color: props.controlColor,
+    size: props.controlSize,
+    radius: props.controlRadius,
+    isDisabled: props.controlIsDisabled,
+  };
+
   return (
     <ImageViewerProvider src={src}>
       <div className="w-full max-w-5xl mx-auto">

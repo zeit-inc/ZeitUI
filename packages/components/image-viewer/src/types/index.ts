@@ -30,7 +30,11 @@ export interface ControlStyleProps {
 
 export interface ImageViewerProps {
   src: string;
-  controlStyle?: ControlStyleProps;
+  controlVariant?: Variant;
+  controlColor?: Color;
+  controlSize?: Size;
+  controlRadius?: Radius;
+  controlIsDisabled?: boolean;
 }
 
 export interface ImageControlsProps {
