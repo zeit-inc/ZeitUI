@@ -11,7 +11,6 @@ const ImageViewer = (props: ImageViewerProps) => {
     color: props.controlColor,
     size: props.controlSize,
     radius: props.controlRadius,
-    isDisabled: props.controlIsDisabled,
   };
 
   return (
