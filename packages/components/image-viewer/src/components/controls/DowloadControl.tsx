@@ -9,7 +9,7 @@ type DownloadControlProps = {
 
 export const DownloadControl = ({ url, ...controlStyles }: DownloadControlProps) => {
   const handleDownload = async () => {
-    await downloadFile(url);
+    await downloadFile({ url });
   };
 
   return (
