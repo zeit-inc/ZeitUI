@@ -1,4 +1,4 @@
-import { IconSvgProps } from "./types";
+import { IconSvgProps } from './types';
 
 export const Minus = (props: IconSvgProps) => (
   <svg
@@ -13,6 +13,6 @@ export const Minus = (props: IconSvgProps) => (
     strokeLinejoin="round"
     {...props}
   >
-    <path d="M5 12h14"/>
+    <path d="M5 12h14" />
   </svg>
 );

@@ -1,4 +1,4 @@
-export type {IconSvgProps} from './types';
+export type { IconSvgProps } from './types';
 
 export * from './CircleX';
 export * from './Download';
