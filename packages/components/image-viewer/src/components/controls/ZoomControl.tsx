@@ -30,11 +30,11 @@ export const ZoomControls = ({
   return (
     <div className="flex items-center">
       <Button
+        {...controlStyles}
         aria-labelledby="zoom-in-label"
         isIconOnly
         onPress={zoomIn}
         isDisabled={isMaxScale}
-        {...controlStyles}
       >
         <ZoomIn />
       </Button>
@@ -45,11 +45,11 @@ export const ZoomControls = ({
       <span className={`w-16 text-center ${sizeText}`}>{scalePorcentage}</span>
 
       <Button
+        {...controlStyles}
         aria-labelledby="zoom-out-label"
         isIconOnly
         onPress={zoomOut}
         isDisabled={isMinScale}
-        {...controlStyles}
       >
         <ZoomOut />
       </Button>
