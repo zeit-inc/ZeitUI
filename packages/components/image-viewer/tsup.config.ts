@@ -1,11 +1,8 @@
-import { defineConfig } from "tsup";
+import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  target: "es2022",
-  format: ["cjs", "esm"],
+  target: 'es2022',
+  format: ['cjs', 'esm'],
   clean: true,
-  dts: true,
-  treeshake: true,
-  external: ["react", "react-dom"],
-  injectStyle: true,
+  banner: { js: '"use client";' },
 });
