@@ -44,11 +44,6 @@ const meta = {
       options: ['none', 'sm', 'md', 'lg', 'full'],
       type: { name: 'string' },
     },
-    controlIsDisabled: {
-      control: 'boolean',
-      description: 'Indica si los controles están deshabilitados',
-      type: { name: 'boolean' },
-    },
   },
 } satisfies Meta<typeof ImageViewer>;
 

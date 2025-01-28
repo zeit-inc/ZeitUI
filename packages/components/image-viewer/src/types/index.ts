@@ -23,9 +23,6 @@ export interface ControlStyleProps {
   color?: Color;
   size?: Size;
   radius?: Radius;
-  isDisabled?: boolean;
-  disableRipple?: boolean;
-  disableAnimation?: boolean;
 }
 
 export interface ImageViewerProps {
@@ -34,7 +31,6 @@ export interface ImageViewerProps {
   controlColor?: Color;
   controlSize?: Size;
   controlRadius?: Radius;
-  controlIsDisabled?: boolean;
 }
 
 export interface ImageControlsProps {
