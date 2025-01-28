@@ -1,6 +1,6 @@
 {
   "name": "@zeitui-org/icons",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Iconos de la librería de componentes de Zeit UI, basados en Lucide Icons",
   "repository": {
     "type": "git",

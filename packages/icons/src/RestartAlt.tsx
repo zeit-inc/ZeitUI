@@ -3,9 +3,9 @@ import { IconSvgProps } from './types';
 export const RestartAlt = (props: IconSvgProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    height="24px"
+    width="1.5em"
+    height="1.5em"
     viewBox="0 -960 960 960"
-    width="24px"
     fill="#FFFFFF"
     {...props}
   >
