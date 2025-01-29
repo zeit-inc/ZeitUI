@@ -1,6 +1,6 @@
 {
   "name": "@zeitui-org/image-viewer",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "Image viewer component with zoom and pan capabilities",
   "author": "Luis Lopez <luislopezhuari27@gmail.com>",
   "homepage": "https://zeitui.luislh.dev",
@@ -58,8 +58,9 @@
   },
   "dependencies": {
     "@heroui/button": "^2.2.10",
-    "@zeitui-org/file-utils": "workspace:*",
-    "@zeitui-org/icons": "workspace:*"
+    "@zeitui-org/file-utils": "1.1.0",
+    "@zeitui-org/icons": "1.0.1",
+    "@heroui/theme": "^2.4.6"
   },
   "clean-package": "../../../clean-package.config.json"
 }
