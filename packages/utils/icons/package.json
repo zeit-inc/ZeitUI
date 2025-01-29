@@ -1,6 +1,6 @@
 {
   "name": "@zeitui-org/icons",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "Luis Lopez <luislopezhuari27@gmail.com>",
   "description": "Iconos de la librería de componentes de Zeit UI, basados en Lucide Icons",
   "repository": {
@@ -8,6 +8,9 @@
     "url": "git+https://github.com/zeit-inc/Zeit-Ui.git",
     "directory": "packages/icons"
   },
+  "files": [
+    "dist"
+  ],
   "sideEffects": false,
   "bugs": {
     "url": "https://github.com/zeit-inc/Zeit-Ui/issues"
