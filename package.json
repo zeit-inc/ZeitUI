@@ -6,13 +6,16 @@
   },
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo run dev",
+    "dev": "pnpm sb",
+    "build": "turbo build --filter=!@zeitui-org/storybook",
     "clean": "turbo run clean",
     "lint": "turbo run lint",
     "test": "turbo run test",
     "typecheck": "turbo run typecheck",
-    "release": "pnpm build && changeset publish"
+    "release": "pnpm build && changeset publish",
+    "sb": "pnpm --filter @zeitui-org/storybook dev",
+    "build:sb": "pnpm --filter @zeitui-org/storybook build",
+    "start:sb": "pnpm --filter @zeitui-org/storybook start"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
