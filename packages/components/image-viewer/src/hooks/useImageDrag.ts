@@ -1,20 +1,20 @@
-import {useCallback, useState} from 'react';
-import {Position} from '../types';
+import { useCallback, useState } from 'react';
+import type { Position } from '../types';
 
 interface UseImageDragProps {
   scale: number;
-  imageDimensions: {width: number; height: number};
+  imageDimensions: { width: number; height: number };
   containerRef: React.RefObject<HTMLDivElement>;
 }
 
-export const useImageDrag = ({scale, imageDimensions, containerRef}: UseImageDragProps) => {
-  const [position, setPosition] = useState<Position>({x: 0, y: 0});
+export const useImageDrag = ({ scale, imageDimensions, containerRef }: UseImageDragProps) => {
+  const [position, setPosition] = useState<Position>({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
-  const [dragStart, setDragStart] = useState<Position>({x: 0, y: 0});
+  const [dragStart, setDragStart] = useState<Position>({ x: 0, y: 0 });
 
   const calculateBoundaries = useCallback(
     (clientX: number, clientY: number): Position => {
-      if (!containerRef.current) return {x: 0, y: 0};
+      if (!containerRef.current) return { x: 0, y: 0 };
 
       const container = containerRef.current.getBoundingClientRect();
       const scaledImageWidth = imageDimensions.width * scale;

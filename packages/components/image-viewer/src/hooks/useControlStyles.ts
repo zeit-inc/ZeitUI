@@ -1,4 +1,4 @@
-import { ControlStyleProps } from '../types';
+import type { ControlStyleProps } from '../types';
 
 export const useControlStyles = (props: ControlStyleProps) => {
   return {

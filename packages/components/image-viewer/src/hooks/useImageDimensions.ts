@@ -1,7 +1,7 @@
-import {useRef, useState} from 'react';
+import { useRef, useState } from 'react';
 
 export const useImageDimensions = () => {
-  const [imageDimensions, setImageDimensions] = useState({width: 0, height: 0});
+  const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
   const imageRef = useRef<HTMLImageElement | null>(null);
 
   const handleImageLoad = () => {
@@ -13,5 +13,5 @@ export const useImageDimensions = () => {
     }
   };
 
-  return {imageDimensions, imageRef, handleImageLoad};
+  return { imageDimensions, imageRef, handleImageLoad };
 };

@@ -1,7 +1,7 @@
 import { useImageViewerState } from '../context/ImageViewerContext';
-import { ControlStyleProps } from '../types';
-import ImageContainer from './image';
+import type { ControlStyleProps } from '../types';
 import ImageControls from './ImageControls';
+import ImageContainer from './image';
 
 type ImageViewerContentProps = {
   controlStyle?: ControlStyleProps;
@@ -22,7 +22,7 @@ export const ImageViewerContent = ({ controlStyle }: ImageViewerContentProps) =>
       <div
         className={`${isFullScreen ? 'h-screen' : 'h-[calc(100vh-64px)] max-h-[1600px]'} relative`}
       >
-        <div className="h-full w-full flex flex-col overflow-hidden">
+        <div className='h-full w-full flex flex-col overflow-hidden'>
           <ImageContainer />
           <ImageControls styles={controlStyle} />
         </div>

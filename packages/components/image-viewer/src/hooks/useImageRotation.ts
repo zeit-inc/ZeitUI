@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 
 export const useImageRotation = () => {
   const [rotation, setRotation] = useState(0);
@@ -15,5 +15,5 @@ export const useImageRotation = () => {
     setRotation(0);
   };
 
-  return {rotation, setRotation, rotateLeft, rotateRight, resetRotation};
+  return { rotation, setRotation, rotateLeft, rotateRight, resetRotation };
 };

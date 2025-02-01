@@ -1,6 +1,6 @@
 import { ImageViewerContent } from './components/ImageViewerContent';
 import { ImageViewerProvider } from './context/ImageViewerContext';
-import { ImageViewerProps } from './types';
+import type { ImageViewerProps } from './types';
 
 const ImageViewer = (props: ImageViewerProps) => {
   const { src } = props;

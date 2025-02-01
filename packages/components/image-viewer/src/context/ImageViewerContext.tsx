@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useRef } from 'react';
+import { createContext, useContext, useRef } from 'react';
 import { useFullScreen } from '../hooks/useFullScreen';
 import { useImageDimensions } from '../hooks/useImageDimensions';
 import { useImageDrag } from '../hooks/useImageDrag';

@@ -3,7 +3,7 @@ import { Drawer, DrawerBody, DrawerContent } from '@heroui/drawer';
 import { useDisclosure } from '@heroui/use-disclosure';
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ImageViewer, ImageViewerProps } from '../src';
+import { ImageViewer, type ImageViewerProps } from '../src';
 
 const meta = {
   title: 'Components/ImageViewer',
@@ -74,11 +74,11 @@ const Template = (args: ImageViewerProps) => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className='flex items-center justify-center h-screen'>
       <Button onPress={onOpen}>Abrir Visor de imagenes</Button>
-      <Drawer isOpen={isOpen} onOpenChange={onOpenChange} size="3xl">
+      <Drawer isOpen={isOpen} onOpenChange={onOpenChange} size='3xl'>
         <DrawerContent>
-          <DrawerBody className="p-8">
+          <DrawerBody className='p-8'>
             <ImageViewer {...args} />
           </DrawerBody>
         </DrawerContent>

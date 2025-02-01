@@ -1,5 +1,5 @@
-import {useState} from 'react';
-import {ALLOWED_SCALES, DEFAULT_SCALE_IMAGE} from '../config/Scale';
+import { useState } from 'react';
+import { ALLOWED_SCALES, DEFAULT_SCALE_IMAGE } from '../config/Scale';
 
 export const useImageScale = () => {
   const [scale, setScale] = useState(DEFAULT_SCALE_IMAGE);

@@ -1,6 +1,6 @@
 import { Button } from '@heroui/button';
 import { RotateCcw, RotateCw } from '@zeitui-org/icons';
-import { ControlStyleProps } from '../../types';
+import type { ControlStyleProps } from '../../types';
 
 type RotateControlProps = {
   onRotateLeft: () => void;
@@ -13,14 +13,14 @@ export const RotateControl = ({
   ...controlStyles
 }: RotateControlProps) => {
   return (
-    <div className="flex gap-2">
-      <Button isIconOnly aria-labelledby="rotate-image" onPress={onRotateLeft} {...controlStyles}>
+    <div className='flex gap-2'>
+      <Button isIconOnly aria-labelledby='rotate-image' onPress={onRotateLeft} {...controlStyles}>
         <RotateCcw />
       </Button>
-      <span id="rotate-image" className="text-sm sr-only">
+      <span id='rotate-image' className='text-sm sr-only'>
         Rotar
       </span>
-      <Button isIconOnly aria-labelledby="rotate-image" onPress={onRotateRight} {...controlStyles}>
+      <Button isIconOnly aria-labelledby='rotate-image' onPress={onRotateRight} {...controlStyles}>
         <RotateCw />
       </Button>
     </div>

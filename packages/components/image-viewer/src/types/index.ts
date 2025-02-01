@@ -1,4 +1,5 @@
 export type Size = 'sm' | 'md' | 'lg' | undefined;
+
 export type Variant =
   | 'solid'
   | 'bordered'
@@ -8,6 +9,7 @@ export type Variant =
   | 'shadow'
   | 'ghost'
   | undefined;
+
 export type Color =
   | 'default'
   | 'primary'
@@ -16,6 +18,7 @@ export type Color =
   | 'warning'
   | 'danger'
   | undefined;
+
 export type Radius = 'none' | 'sm' | 'md' | 'lg' | 'full' | undefined;
 
 export interface ControlStyleProps {

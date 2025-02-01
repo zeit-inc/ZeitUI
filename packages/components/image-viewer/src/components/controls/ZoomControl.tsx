@@ -1,6 +1,6 @@
 import { Button } from '@heroui/button';
 import { ZoomIn, ZoomOut } from '@zeitui-org/icons';
-import { ControlStyleProps } from '../../types';
+import type { ControlStyleProps } from '../../types';
 
 type ZoomControlsProps = {
   scale: number;
@@ -18,7 +18,7 @@ export const ZoomControls = ({
   isMinScale,
   ...controlStyles
 }: ZoomControlsProps) => {
-  const scalePorcentage = scale * 100 + '%';
+  const scalePorcentage = `${scale * 100}%`;
 
   // Ajusta el tamaño del texto según la propiedad `size` de `controlStyles`:
   // - 'sm' -> 'text-sm'
@@ -28,17 +28,17 @@ export const ZoomControls = ({
     controlStyles.size === 'sm' ? 'text-sm' : controlStyles.size === 'md' ? 'text-base' : 'text-lg';
 
   return (
-    <div className="flex items-center">
+    <div className='flex items-center'>
       <Button
         {...controlStyles}
-        aria-labelledby="zoom-in-label"
+        aria-labelledby='zoom-in-label'
         isIconOnly
         onPress={zoomIn}
         isDisabled={isMaxScale}
       >
         <ZoomIn />
       </Button>
-      <span id="zoom-in-label" className="sr-only">
+      <span id='zoom-in-label' className='sr-only'>
         Incrementar zoom
       </span>
 
@@ -46,14 +46,14 @@ export const ZoomControls = ({
 
       <Button
         {...controlStyles}
-        aria-labelledby="zoom-out-label"
+        aria-labelledby='zoom-out-label'
         isIconOnly
         onPress={zoomOut}
         isDisabled={isMinScale}
       >
         <ZoomOut />
       </Button>
-      <span id="zoom-out-label" className="sr-only">
+      <span id='zoom-out-label' className='sr-only'>
         Reducir zoom
       </span>
     </div>

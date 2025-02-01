@@ -1,6 +1,6 @@
 import { Button } from '@heroui/button';
 import { Maximize, Minimize } from '@zeitui-org/icons';
-import { ControlStyleProps } from '../../types';
+import type { ControlStyleProps } from '../../types';
 
 const ExitFulllScren = 'Salir del modo de pantalla completa';
 const EnterFullScreen = 'Entrar en modo de pantalla completa';
@@ -23,7 +23,7 @@ export const FullScreenControl = ({
       title={isFullScreen ? ExitFulllScren : EnterFullScreen}
       {...constrolStyles}
     >
-      {isFullScreen ? <Minimize aria-hidden="true" /> : <Maximize aria-hidden="true" />}
+      {isFullScreen ? <Minimize aria-hidden='true' /> : <Maximize aria-hidden='true' />}
     </Button>
   );
 };
