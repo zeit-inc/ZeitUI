@@ -1,12 +1,27 @@
 {
-  "name": "storybook",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@zeitui-org/storybook",
+  "version": "1.0.0",
   "type": "module",
   "sideEffects": true,
+  "author": {
+    "name": "Luis Lopez",
+    "email": "luislopezhuari27@gmail.com"
+  },
+  "main": "src/index.ts",
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeit-inc/Zeit-Ui.git",
+    "directory": "packages/storybook"
+  },
+  "bugs": {
+    "url": "https://github.com/zeit-inc/Zeit-Ui/issues"
+  },
   "scripts": {
     "dev": "pnpm storybook dev -p 6006",
     "build": "pnpm storybook build",
