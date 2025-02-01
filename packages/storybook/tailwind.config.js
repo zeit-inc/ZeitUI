@@ -1,4 +1,4 @@
-import {heroui} from '@heroui/react';
+import { heroui } from '@heroui/react';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -17,5 +17,7 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [heroui()],
+  plugins: [heroui({
+    addCommonColors: true,
+  })],
 };
