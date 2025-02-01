@@ -6,4 +6,9 @@ export default defineConfig({
   optimizeDeps: {
     include: ['@storybook/theming', '@mdx-js/react'],
   },
+  build: {
+    rollupOptions: {
+      external: ['@heroui/button'],
+    },
+  },
 });

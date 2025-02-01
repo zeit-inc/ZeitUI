@@ -16,4 +16,4 @@ dist-ssr
 .turbo
 
 ## pnpm
-pnpm-lock.yaml
+.vercel
