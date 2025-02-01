@@ -1,21 +1,21 @@
-import type { StorybookConfig } from "@storybook/react-vite";
-import { dirname, join } from "path";
-import remarkGfm from "remark-gfm";
+import type { StorybookConfig } from '@storybook/react-vite';
+import { dirname, join } from 'node:path';
+import remarkGfm from 'remark-gfm';
 
 const config: StorybookConfig = {
   stories: [
-    "./welcome.mdx",
-    "../../components/**/stories/**/*.stories.@(js|jsx|ts|tsx)",
-    "../../core/theme/stories/*.stories.@(js|jsx|ts|tsx)",
+    './welcome.mdx',
+    '../../components/**/stories/**/*.stories.@(js|jsx|ts|tsx)',
+    '../../core/theme/stories/*.stories.@(js|jsx|ts|tsx)',
   ],
-  staticDirs: ["../public"],
+  staticDirs: ['../public'],
   addons: [
-    getAbsolutePath("@storybook/addon-a11y"),
-    getAbsolutePath("@storybook/addon-essentials"),
-    getAbsolutePath("@storybook/addon-links"),
-    getAbsolutePath("storybook-dark-mode"),
+    getAbsolutePath('@storybook/addon-a11y'),
+    getAbsolutePath('@storybook/addon-essentials'),
+    getAbsolutePath('@storybook/addon-links'),
+    getAbsolutePath('storybook-dark-mode'),
     {
-      name: "@storybook/addon-docs",
+      name: '@storybook/addon-docs',
       options: {
         mdxPluginOptions: {
           mdxCompileOptions: {
@@ -24,10 +24,10 @@ const config: StorybookConfig = {
         },
       },
     },
-    "./addons/react-strict-mode/register",
+    './addons/react-strict-mode/register',
   ],
   framework: {
-    name: getAbsolutePath("@storybook/react-vite"),
+    name: getAbsolutePath('@storybook/react-vite'),
     options: {},
   },
   core: {
@@ -39,7 +39,7 @@ const config: StorybookConfig = {
 };
 
 function getAbsolutePath(value: string) {
-  return dirname(require.resolve(join(value, "package.json")));
+  return dirname(require.resolve(join(value, 'package.json')));
 }
 
 export default config;
