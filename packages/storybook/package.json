@@ -1,6 +1,6 @@
 {
   "name": "@zeitui-org/storybook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "sideEffects": true,
   "author": {
@@ -11,6 +11,7 @@
   "files": [
     "dist"
   ],
+  "homepage": "https://zeitui.vercel.app",
   "publishConfig": {
     "access": "public"
   },
